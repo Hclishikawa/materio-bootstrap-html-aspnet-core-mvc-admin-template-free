@@ -891,6 +891,7 @@ if (typeof window !== 'undefined') {
     document.addEventListener('DOMContentLoaded', function onContentLoaded() {
       Helpers.update()
       document.removeEventListener('DOMContentLoaded', onContentLoaded)
+      console.log("Hello, world!");
     })
 }
 
