@@ -30,7 +30,7 @@ pipeline {
 
         stage('Black Duck Scan') {
             steps {
-                withCredentials([string(credentialsId: 'black-duck-api-token', variable: 'BD_API_TOKEN')]) {
+                withCredentials([string(variable: 'BD_API_TOKEN')]) {
                     sh "detect --blackduck.url=${BD_URL} --blackduck.api.token=${BD_API_TOKEN} --blackduck.trust.cert=true --detect.project.name=${BD_PROJECT_NAME} --detect.project.version.name=${BD_VERSION_NAME} --detect.code.location.name=${BD_SCAN_NAME} --detect.source.path=${SOLUTION_NAME} --detect.risk.report.pdf=true --detect.risk.report.pdf.path=risk-report.pdf"
                 }
             }
