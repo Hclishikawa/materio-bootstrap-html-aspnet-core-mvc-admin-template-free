@@ -9,7 +9,7 @@ pipeline {
         BD_URL = 'https://poc416.blackduck.synopsys.com/' // Replace with your Black Duck server URL
         SOLUTION_NAME = '/var/lib/jenkins/workspace/NEwTEst' // Replace with your .NET solution file name
     }
-  triggers { githubPush() // This trigger listens for GitHub webhook events }
+  triggers { githubPush() } // This trigger listens for GitHub webhook events 
 
     stages {
         stage('Checkout') {
