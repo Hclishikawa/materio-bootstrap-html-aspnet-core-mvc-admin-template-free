@@ -32,7 +32,7 @@ pipeline {
         stage('Black Duck Scan') {
             steps {
                 withEnv(['HEADLESS=true']) {
-                    sh "/opt/SynopsysDetect/synopsys-detect --blackduck.url=${BD_URL} --blackduck.api.token=${BD_API_TOKEN} --blackduck.trust.cert=true --detect.project.name=${BD_PROJECT_NAME} --detect.project.version.name=${BD_VERSION_NAME} --detect.code.location.name=${BD_SCAN_NAME} --detect.source.path=${SOLUTION_NAME} --detect.risk.report.pdf=true --detect.risk.report.pdf.path=risk-report.pdf"
+                    sh "java -jar /var/lib/jenkins/synopsys-detect/download/synopsys-detect-9.8.0.jar --blackduck.url=${BD_URL} --blackduck.api.token=${BD_API_TOKEN} --blackduck.trust.cert=true --detect.project.name=${BD_PROJECT_NAME} --detect.project.version.name=${BD_VERSION_NAME} --detect.code.location.name=${BD_SCAN_NAME} --detect.source.path=${SOLUTION_NAME} --detect.risk.report.pdf=true --detect.risk.report.pdf.path=risk-report.pdf"
                 }
             }
         }
