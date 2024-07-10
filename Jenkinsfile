@@ -8,7 +8,7 @@ pipeline {
         BD_API_TOKEN = 'NjI3YjYyY2ItZTIzOS00NTEwLWEyNjYtMTRjZjg2MTZlZTFkOjVhODc2ODMwLTRmYTctNDRmYS1iMGQ3LTI0NzI1MzVjYTY2Nw==' // Jenkins credentials for Black Duck API token
         BD_URL = 'https://poc416.blackduck.synopsys.com/' // Replace with your Black Duck server URL
         SOLUTION_NAME = 'AspnetCoreMvcFull.sln' // Replace with your .NET solution file name
-        DETECT_COMMAND = '/etc/alternatives/synopsys-detect' 
+        DETECT_COMMAND = '/opt/Synopsys Detect/synopsys-detect' 
     }
 
     stages {
