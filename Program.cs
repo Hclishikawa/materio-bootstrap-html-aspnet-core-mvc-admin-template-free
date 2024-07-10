@@ -6,7 +6,7 @@ builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
-console.WriteLine("Blackduck testing.................");
+console.WriteLine("Blackduck testing..............");
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
